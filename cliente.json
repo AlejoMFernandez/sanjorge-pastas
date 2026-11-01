@@ -1,0 +1,1107 @@
+{
+ "$schema": "https://raw.githubusercontent.com/AlejoMFernandez/kit-demos/main/docs/cliente.schema.json",
+ "id": "san-jorge-pastas",
+ "nombre": "San Jorge · Fábrica de Pastas",
+ "pais": "AR",
+ "idioma": "es",
+ "modo": "demo",
+ "demoVersion": 1,
+ "whatsapp": "5491153395432",
+ "instagram": "sanjorgepastas",
+ "prefijoPedido": "SJ",
+ "supabase": {
+  "url": "",
+  "anonKey": ""
+ },
+ "marca": {
+  "logo": "img/marca/logo-pino.svg",
+  "logoPanel": "img/marca/logo-blanco.svg",
+  "logoClaro": "img/marca/logo-blanco.svg",
+  "isotipo": "img/marca/isotipo-pino.svg",
+  "favicon": "img/marca/isotipo-pino.svg",
+  "colores": {
+   "fondo": "#FFF9EE",
+   "superficie": "#FFFFFF",
+   "texto": "#2B4636",
+   "primario": "#2B4636",
+   "sobrePrimario": "#FFFFFF",
+   "acento": "#FED385",
+   "sobreAcento": "#2B4636",
+   "borde": "#E6DCC6",
+   "suave": "#4D6455",
+   "ok": "#0F7A3A",
+   "alerta": "#B4501A",
+   "error": "#B23A32"
+  },
+  "fuentes": {
+   "titulos": "'Bodoni Moda', Georgia, serif",
+   "texto": "'Work Sans', system-ui, sans-serif",
+   "googleFonts": ""
+  },
+  "estilo": {
+   "forma": "pildora",
+   "sombra": "suave",
+   "borde": "1px",
+   "mayusculas": false
+  }
+ },
+ "modulos": {
+  "carta": true,
+  "carrito": true,
+  "reservas": false,
+  "admin": true
+ },
+ "horarios": {
+  "lun": [],
+  "mar": [
+   [
+    "08:30",
+    "13:30"
+   ],
+   [
+    "16:30",
+    "20:30"
+   ]
+  ],
+  "mie": [
+   [
+    "08:30",
+    "13:30"
+   ],
+   [
+    "16:30",
+    "20:30"
+   ]
+  ],
+  "jue": [
+   [
+    "08:30",
+    "13:30"
+   ],
+   [
+    "16:30",
+    "20:30"
+   ]
+  ],
+  "vie": [
+   [
+    "08:30",
+    "13:30"
+   ],
+   [
+    "16:30",
+    "20:30"
+   ]
+  ],
+  "sab": [
+   [
+    "08:30",
+    "13:30"
+   ],
+   [
+    "16:30",
+    "20:30"
+   ]
+  ],
+  "dom": [
+   [
+    "08:30",
+    "13:30"
+   ]
+  ]
+ },
+ "pedidos": {
+  "salidas": [
+   "efectivo",
+   "mercadopago"
+  ],
+  "tipos": [
+   "retiro",
+   "delivery"
+  ],
+  "envio": 0,
+  "aviso": "panel",
+  "encargo": {
+   "anticipacionHoras": 2,
+   "diasAdelante": 7,
+   "franjas": [
+    {
+     "id": "manana",
+     "nombre": "Mañana",
+     "desde": "08:30",
+     "hasta": "13:30"
+    },
+    {
+     "id": "tarde",
+     "nombre": "Tarde",
+     "desde": "16:30",
+     "hasta": "20:30"
+    }
+   ]
+  },
+  "promos": [
+   {
+    "id": "mie-fideos",
+    "nombre": "Miércoles: fideos y ñoquis",
+    "dias": [
+     "mie"
+    ],
+    "pct": 20,
+    "categorias": [
+     "fideos",
+     "noquis"
+    ],
+    "destacado": "promos.mieFideos"
+   },
+   {
+    "id": "mie-ravioles",
+    "nombre": "Miércoles: ravioles",
+    "dias": [
+     "mie"
+    ],
+    "pct": 10,
+    "categorias": [
+     "ravioles"
+    ],
+    "destacado": "promos.mieRavioles"
+   },
+   {
+    "id": "29-noquis",
+    "nombre": "29 de ñoquis",
+    "diasMes": [
+     29
+    ],
+    "pct": 15,
+    "categorias": [
+     "noquis"
+    ],
+    "destacado": "promos.d29"
+   }
+  ]
+ },
+ "pagos": {
+  "mercadopago": {
+   "modo": "sandbox",
+   "endpoint": "https://kit-demos-amf.vercel.app/api/mp-preference"
+  }
+ },
+ "destacados": [
+  {
+   "id": "promos",
+   "nombre": "Promos",
+   "ayuda": "El % de cada promo fija. Se aplica sola en los pedidos de ese día. 0 = apagada.",
+   "campos": [
+    {
+     "id": "mieFideos",
+     "label": "Miércoles · % en fideos y ñoquis"
+    },
+    {
+     "id": "mieRavioles",
+     "label": "Miércoles · % en ravioles"
+    },
+    {
+     "id": "d29",
+     "label": "Día 29 · % en ñoquis"
+    }
+   ],
+   "valores": {
+    "mieFideos": "20",
+    "mieRavioles": "10",
+    "d29": "15"
+   }
+  }
+ ],
+ "cartaQR": {
+  "textos": {
+   "titulo": "Nuestra carta"
+  }
+ },
+ "carta": {
+  "categorias": [
+   {
+    "id": "ravioles",
+    "nombre": "Ravioles"
+   },
+   {
+    "id": "fideos",
+    "nombre": "Fideos"
+   },
+   {
+    "id": "especialidades",
+    "nombre": "Especialidades"
+   },
+   {
+    "id": "noquis",
+    "nombre": "Ñoquis"
+   },
+   {
+    "id": "vegana",
+    "nombre": "Pasta vegana",
+    "anticipacionHoras": 24
+   },
+   {
+    "id": "salsas",
+    "nombre": "Salsas"
+   },
+   {
+    "id": "listas",
+    "nombre": "Comidas listas"
+   },
+   {
+    "id": "postres",
+    "nombre": "Postres"
+   }
+  ],
+  "productos": [
+   {
+    "id": "rav-especiales",
+    "categoria": "ravioles",
+    "nombre": "Especiales",
+    "descripcion": "Carne y verdura",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/ravioles.webp",
+    "variantes": [
+     {
+      "id": "caja",
+      "nombre": "Caja",
+      "precio": 6900
+     }
+    ]
+   },
+   {
+    "id": "rav-pollo",
+    "categoria": "ravioles",
+    "nombre": "Pollo y verdura",
+    "descripcion": "",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "caja",
+      "nombre": "Caja",
+      "precio": 6900
+     }
+    ]
+   },
+   {
+    "id": "rav-ricota-parmesano",
+    "categoria": "ravioles",
+    "nombre": "Ricota y parmesano",
+    "descripcion": "",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/ravioles3.webp",
+    "variantes": [
+     {
+      "id": "caja",
+      "nombre": "Caja",
+      "precio": 6900
+     }
+    ]
+   },
+   {
+    "id": "rav-ricota-jamon",
+    "categoria": "ravioles",
+    "nombre": "Ricota y jamón",
+    "descripcion": "",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "caja",
+      "nombre": "Caja",
+      "precio": 6900
+     }
+    ]
+   },
+   {
+    "id": "rav-ricota-nuez",
+    "categoria": "ravioles",
+    "nombre": "Ricota y nuez",
+    "descripcion": "",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/ravioles2.webp",
+    "variantes": [
+     {
+      "id": "caja",
+      "nombre": "Caja",
+      "precio": 6900
+     }
+    ],
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "rav-4quesos",
+    "categoria": "ravioles",
+    "nombre": "Cuatro quesos",
+    "descripcion": "",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "caja",
+      "nombre": "Caja",
+      "precio": 7100
+     }
+    ]
+   },
+   {
+    "id": "rav-calabaza",
+    "categoria": "ravioles",
+    "nombre": "Calabaza y parmesano",
+    "descripcion": "",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "caja",
+      "nombre": "Caja",
+      "precio": 6900
+     }
+    ]
+   },
+   {
+    "id": "rav-integrales",
+    "categoria": "ravioles",
+    "nombre": "Integrales de verdura",
+    "descripcion": "Con queso crema y parmesano",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "caja",
+      "nombre": "Caja",
+      "precio": 7300
+     }
+    ]
+   },
+   {
+    "id": "rav-morron",
+    "categoria": "ravioles",
+    "nombre": "Ricota y muzzarella",
+    "descripcion": "Con masa de morrón",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "caja",
+      "nombre": "Caja",
+      "precio": 7300
+     }
+    ]
+   },
+   {
+    "id": "rav-verdes",
+    "categoria": "ravioles",
+    "nombre": "Ravioles verdes",
+    "descripcion": "Masa de espinaca, rellenos de ricota y espinaca",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "caja",
+      "nombre": "Caja",
+      "precio": 7300
+     }
+    ]
+   },
+   {
+    "id": "fid-huevo",
+    "categoria": "fideos",
+    "nombre": "Tallarines al huevo",
+    "descripcion": "Los clásicos de siempre",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/fideos.webp",
+    "variantes": [
+     {
+      "id": "medio",
+      "nombre": "½ kg",
+      "precio": 5900
+     },
+     {
+      "id": "kilo",
+      "nombre": "1 kg",
+      "precio": 11800
+     }
+    ]
+   },
+   {
+    "id": "fid-morron",
+    "categoria": "fideos",
+    "nombre": "Tallarines de morrón",
+    "descripcion": "",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/fideos-morron.webp",
+    "variantes": [
+     {
+      "id": "medio",
+      "nombre": "½ kg",
+      "precio": 5900
+     },
+     {
+      "id": "kilo",
+      "nombre": "1 kg",
+      "precio": 11800
+     }
+    ]
+   },
+   {
+    "id": "fid-espinaca",
+    "categoria": "fideos",
+    "nombre": "Tallarines de espinaca",
+    "descripcion": "",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/fideos2.webp",
+    "variantes": [
+     {
+      "id": "medio",
+      "nombre": "½ kg",
+      "precio": 5900
+     },
+     {
+      "id": "kilo",
+      "nombre": "1 kg",
+      "precio": 11800
+     }
+    ]
+   },
+   {
+    "id": "fid-remolacha",
+    "categoria": "fideos",
+    "nombre": "Tallarines de remolacha",
+    "descripcion": "",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "medio",
+      "nombre": "½ kg",
+      "precio": 5900
+     },
+     {
+      "id": "kilo",
+      "nombre": "1 kg",
+      "precio": 11800
+     }
+    ]
+   },
+   {
+    "id": "fid-albahaca",
+    "categoria": "fideos",
+    "nombre": "Fideos de albahaca",
+    "descripcion": "Con parmesano y ajo",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/fideos-pesto.webp",
+    "variantes": [
+     {
+      "id": "medio",
+      "nombre": "½ kg",
+      "precio": 6300
+     },
+     {
+      "id": "kilo",
+      "nombre": "1 kg",
+      "precio": 12600
+     }
+    ]
+   },
+   {
+    "id": "fid-caseros",
+    "categoria": "fideos",
+    "nombre": "Caseritos",
+    "descripcion": "Cinta ancha y mediana",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "medio",
+      "nombre": "½ kg",
+      "precio": 5900
+     },
+     {
+      "id": "kilo",
+      "nombre": "1 kg",
+      "precio": 11800
+     }
+    ]
+   },
+   {
+    "id": "fid-integrales",
+    "categoria": "fideos",
+    "nombre": "Fideos integrales",
+    "descripcion": "De harina integral",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "medio",
+      "nombre": "½ kg",
+      "precio": 6300
+     },
+     {
+      "id": "kilo",
+      "nombre": "1 kg",
+      "precio": 12600
+     }
+    ]
+   },
+   {
+    "id": "fid-fuccilles",
+    "categoria": "fideos",
+    "nombre": "Fuccilles",
+    "descripcion": "Fideos tirabuzón",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/fideos3.webp",
+    "variantes": [
+     {
+      "id": "medio",
+      "nombre": "½ kg",
+      "precio": 5900
+     },
+     {
+      "id": "kilo",
+      "nombre": "1 kg",
+      "precio": 11800
+     }
+    ]
+   },
+   {
+    "id": "sorrentinos",
+    "categoria": "especialidades",
+    "nombre": "Sorrentinos",
+    "descripcion": "Muzzarella y jamón · caja de 12",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/sorrentinos.webp",
+    "variantes": [
+     {
+      "id": "caja",
+      "nombre": "Caja",
+      "precio": 14500
+     }
+    ]
+   },
+   {
+    "id": "raviolones-med",
+    "categoria": "especialidades",
+    "nombre": "Raviolones mediterráneos",
+    "descripcion": "Muzzarella, tomate y albahaca · caja de 12",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/especialidades.webp",
+    "variantes": [
+     {
+      "id": "caja",
+      "nombre": "Caja",
+      "precio": 14500
+     }
+    ],
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "raviolones",
+    "categoria": "especialidades",
+    "nombre": "Raviolones",
+    "descripcion": "Muzzarella, puerro, jamón, roquefort y parmesano · caja de 12",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/raviolones.webp",
+    "variantes": [
+     {
+      "id": "caja",
+      "nombre": "Caja",
+      "precio": 14500
+     }
+    ]
+   },
+   {
+    "id": "capelettis",
+    "categoria": "especialidades",
+    "nombre": "Capelettis",
+    "descripcion": "Carne asada y queso parmesano",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "medio",
+      "nombre": "½ kg",
+      "precio": 11500
+     },
+     {
+      "id": "kilo",
+      "nombre": "1 kg",
+      "precio": 23000
+     }
+    ]
+   },
+   {
+    "id": "tortelettis",
+    "categoria": "especialidades",
+    "nombre": "Tortelettis",
+    "descripcion": "Carne asada",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/tortelettis.webp",
+    "variantes": [
+     {
+      "id": "medio",
+      "nombre": "½ kg",
+      "precio": 11500
+     },
+     {
+      "id": "kilo",
+      "nombre": "1 kg",
+      "precio": 23000
+     }
+    ]
+   },
+   {
+    "id": "noq-ricota",
+    "categoria": "noquis",
+    "nombre": "Ñoquis de ricota",
+    "descripcion": "Hechos a mano",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/noquis.webp",
+    "variantes": [
+     {
+      "id": "medio",
+      "nombre": "½ kg",
+      "precio": 6300
+     },
+     {
+      "id": "kilo",
+      "nombre": "1 kg",
+      "precio": 12600
+     }
+    ]
+   },
+   {
+    "id": "noq-tricolor",
+    "categoria": "noquis",
+    "nombre": "Ñoquis tricolor",
+    "descripcion": "Papa, espinaca y morrón",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "medio",
+      "nombre": "½ kg",
+      "precio": 6300
+     },
+     {
+      "id": "kilo",
+      "nombre": "1 kg",
+      "precio": 12600
+     }
+    ]
+   },
+   {
+    "id": "veg-noquis",
+    "categoria": "vegana",
+    "nombre": "Ñoquis de papa",
+    "descripcion": "Sin ingredientes de origen animal",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "medio",
+      "nombre": "½ kg",
+      "precio": 6500
+     },
+     {
+      "id": "kilo",
+      "nombre": "1 kg",
+      "precio": 13000
+     }
+    ],
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "veg-fideos",
+    "categoria": "vegana",
+    "nombre": "Fideos de espinaca y remolacha",
+    "descripcion": "",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "medio",
+      "nombre": "½ kg",
+      "precio": 6300
+     },
+     {
+      "id": "kilo",
+      "nombre": "1 kg",
+      "precio": 12600
+     }
+    ],
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "veg-raviolones",
+    "categoria": "vegana",
+    "nombre": "Raviolones de calabaza",
+    "descripcion": "Con berenjenas ahumadas · caja de 12",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "caja",
+      "nombre": "Caja",
+      "precio": 15000
+     }
+    ],
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "sal-tuco",
+    "categoria": "salsas",
+    "nombre": "Tuco",
+    "descripcion": "Salsa de tomate casera",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "chico",
+      "nombre": "Pote chico",
+      "precio": 4300
+     },
+     {
+      "id": "grande",
+      "nombre": "Pote grande",
+      "precio": 7300
+     }
+    ]
+   },
+   {
+    "id": "sal-bolognesa",
+    "categoria": "salsas",
+    "nombre": "Bolognesa",
+    "descripcion": "",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/salsas.webp",
+    "variantes": [
+     {
+      "id": "chico",
+      "nombre": "Pote chico",
+      "precio": 6500
+     },
+     {
+      "id": "grande",
+      "nombre": "Pote grande",
+      "precio": 11000
+     }
+    ]
+   },
+   {
+    "id": "sal-crema",
+    "categoria": "salsas",
+    "nombre": "Salsa blanca",
+    "descripcion": "",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "chico",
+      "nombre": "Pote chico",
+      "precio": 4800
+     },
+     {
+      "id": "grande",
+      "nombre": "Pote grande",
+      "precio": 8500
+     }
+    ]
+   },
+   {
+    "id": "sal-hongos",
+    "categoria": "salsas",
+    "nombre": "Crema de hongos",
+    "descripcion": "",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "chico",
+      "nombre": "Pote chico",
+      "precio": 6300
+     },
+     {
+      "id": "grande",
+      "nombre": "Pote grande",
+      "precio": 10500
+     }
+    ]
+   },
+   {
+    "id": "sal-pesto",
+    "categoria": "salsas",
+    "nombre": "Pesto",
+    "descripcion": "Albahaca fresca",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "chico",
+      "nombre": "Pote chico",
+      "precio": 7800
+     },
+     {
+      "id": "grande",
+      "nombre": "Pote grande",
+      "precio": 13500
+     }
+    ]
+   },
+   {
+    "id": "sal-medit",
+    "categoria": "salsas",
+    "nombre": "Mediterránea",
+    "descripcion": "Oliva, ajo y tomate",
+    "precio": null,
+    "disponible": true,
+    "variantes": [
+     {
+      "id": "chico",
+      "nombre": "Pote chico",
+      "precio": 5300
+     },
+     {
+      "id": "grande",
+      "nombre": "Pote grande",
+      "precio": 9000
+     }
+    ]
+   },
+   {
+    "id": "empanadas",
+    "categoria": "listas",
+    "nombre": "Empanadas",
+    "descripcion": "Elegí el gusto",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/empanadas.webp",
+    "variantes": [
+     {
+      "id": "u",
+      "nombre": "Unidad",
+      "precio": 1900
+     },
+     {
+      "id": "doc",
+      "nombre": "Docena",
+      "precio": 20000
+     }
+    ],
+    "opciones": [
+     {
+      "id": "gusto",
+      "nombre": "Gusto",
+      "valores": [
+       {
+        "id": "carne",
+        "nombre": "Carne"
+       },
+       {
+        "id": "jyq",
+        "nombre": "Jamón y queso"
+       },
+       {
+        "id": "pollo",
+        "nombre": "Pollo"
+       },
+       {
+        "id": "verdura",
+        "nombre": "Verdura"
+       },
+       {
+        "id": "fatay",
+        "nombre": "Fatay"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "tarta",
+    "categoria": "listas",
+    "nombre": "Tarta entera",
+    "descripcion": "Lista para hornear",
+    "precio": 19000,
+    "disponible": true,
+    "foto": "img/carta/tartas.webp",
+    "opciones": [
+     {
+      "id": "gusto",
+      "nombre": "Gusto",
+      "valores": [
+       {
+        "id": "jyq",
+        "nombre": "Jamón y queso"
+       },
+       {
+        "id": "verdura",
+        "nombre": "Verdura"
+       },
+       {
+        "id": "qyc",
+        "nombre": "Queso y cebolla"
+       },
+       {
+        "id": "calabaza",
+        "nombre": "Calabaza"
+       },
+       {
+        "id": "zapallito",
+        "nombre": "Zapallito"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "pizza",
+    "categoria": "listas",
+    "nombre": "Pizza",
+    "descripcion": "Lista para hornear",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/pizza.webp",
+    "variantes": [
+     {
+      "id": "muzza",
+      "nombre": "Muzzarella",
+      "precio": 12000
+     },
+     {
+      "id": "fugazza",
+      "nombre": "Fugazza",
+      "precio": 11000
+     },
+     {
+      "id": "fugazzeta",
+      "nombre": "Fugazzeta rellena",
+      "precio": 16000
+     }
+    ]
+   },
+   {
+    "id": "prepizzas",
+    "categoria": "listas",
+    "nombre": "Prepizzas",
+    "descripcion": "Con salsa de tomate · común o integral",
+    "precio": null,
+    "disponible": true,
+    "foto": "img/carta/pizza-integral.webp",
+    "variantes": [
+     {
+      "id": "x2",
+      "nombre": "Pack x2",
+      "precio": 4400
+     },
+     {
+      "id": "x4",
+      "nombre": "Pack x4",
+      "precio": 8200
+     }
+    ]
+   },
+   {
+    "id": "canelones",
+    "categoria": "listas",
+    "nombre": "Canelones",
+    "descripcion": "Bandeja de 4, gustos a elección",
+    "precio": 14000,
+    "disponible": true,
+    "foto": "img/carta/canelones.webp"
+   },
+   {
+    "id": "tortilla",
+    "categoria": "listas",
+    "nombre": "Tortilla de papa",
+    "descripcion": "",
+    "precio": 9500,
+    "disponible": true,
+    "foto": "img/carta/tortilla.webp"
+   },
+   {
+    "id": "mila-berenjena",
+    "categoria": "listas",
+    "nombre": "Milanesa de berenjena",
+    "descripcion": "Con ensalada rusa",
+    "precio": 8500,
+    "disponible": true,
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "lasana",
+    "categoria": "listas",
+    "nombre": "Lasaña casera",
+    "descripcion": "Porción",
+    "precio": 9000,
+    "disponible": true
+   },
+   {
+    "id": "tiramisu",
+    "categoria": "postres",
+    "nombre": "Tiramisú",
+    "descripcion": "",
+    "precio": 8000,
+    "disponible": true,
+    "foto": "img/carta/postres.webp"
+   },
+   {
+    "id": "tiramisu-fr",
+    "categoria": "postres",
+    "nombre": "Tiramisú con frutos rojos",
+    "descripcion": "",
+    "precio": 8800,
+    "disponible": true
+   },
+   {
+    "id": "chocotorta",
+    "categoria": "postres",
+    "nombre": "Chocotorta",
+    "descripcion": "",
+    "precio": 8000,
+    "disponible": true
+   }
+  ]
+ },
+ "textos": {
+  "verPedido": "Mi pedido",
+  "tuPedido": "Tu pedido",
+  "retiro": "Retiro en el local",
+  "delivery": "Envío a domicilio",
+  "direccion": "Dirección (envío gratis en Villa Devoto)",
+  "comoPagas": "¿Cómo pagás?",
+  "porEfectivo": "Al retirar o al recibir",
+  "porEfectivoSubSin": "Efectivo o transferencia",
+  "porEfectivoSub": "Efectivo o transferencia",
+  "pedidoListo": "¡Pedido recibido!",
+  "pedidoListoPanel": "Tu código es {codigo}. Ya está en el panel de San Jorge; si hace falta confirmar algo, te llaman.",
+  "diaRetiro": "¿Qué día lo retirás?",
+  "diaEnvio": "¿Qué día te lo llevamos?"
+ }
+}
