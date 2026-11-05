@@ -5,3 +5,7 @@
 @font-face { font-family: 'Work Sans'; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/work-sans-latin-500-normal.woff2) format('woff2'); }
 @font-face { font-family: 'Work Sans'; font-style: normal; font-weight: 600 700; font-display: swap; src: url(../fonts/work-sans-latin-600-normal.woff2) format('woff2'); }
 @font-face { font-family: 'Allura'; font-style: normal; font-weight: 400; font-display: swap; src: url(../fonts/allura-latin-400-normal.woff2) format('woff2'); }
+
+/* Bodoni con trazos finos más firmes: óptica de texto (opsz 11) en todos los tamaños, así los títulos no se "rompen" sobre los fondos */
+*, *::before, *::after { font-variation-settings: 'opsz' 11 !important; }  /* !important: el shorthand font de cada regla la resetea */
+:where(.kit-root, .kit-admin, .kmn) :is(h1, h2, h3, h4) { font-weight: 600; }

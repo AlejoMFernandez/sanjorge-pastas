@@ -353,6 +353,7 @@ function pintarPila() {
   const htmlPila = vis.length ? vis.map((c, i) => `<i class="${c}"${nueva && i === vis.length - 1 ? '' : ' style="animation:none"'}></i>`).join('') : '<i class="vacia"></i><i class="vacia"></i><i class="vacia"></i>';
   $$('.pila').forEach(p => { p.innerHTML = htmlPila; });
   $$('[data-sj-n]').forEach(x => { x.textContent = n; });
+  html.classList.toggle('pedido-vacio', n === 0);
 }
 
 // ---------- promos: chip del hero, semana, cuenta al 29
